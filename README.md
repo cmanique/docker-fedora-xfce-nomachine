@@ -2,6 +2,8 @@
 
 A Fedora based Docker image with Xfce4 and NoMachine which allows for local Virtual Machine equivalent graphical performance (as opposed to X11, VNC and RDP), accessing the desktop environment.
 
+Also featured on https://dev.to/cmanique/docker-as-an-alternative-to-virtual-machines-for-transient-environments-that-require-a-gui-24la
+
 ----------
 > **DISCLAIMER**: so far this has been tested on Windows 10 64bit host, which is the platform that lacks the most in terms of graphical connectivity to remote environments other than native remote desktop connections, or virtual machines working in seamless mode, that come at a great cost of storage space, and don't have the modular capabilities of docker.
 > 
@@ -71,29 +73,37 @@ Follow the instructions at https://www.nomachine.com/DT02O00124 in order to corr
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-003-nomachine-host.jpg?raw=true)
 
 ### Ensure authentication is set to **Password** and click **Continue**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-004-nomachine-authentication.jpg?raw=true)
 
 ### Ensure **Don't use a proxy** is selected and click **Continue**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-005-nomachine-proxy.jpg?raw=true)
 
 ### Name your connection accordingly and click **Done**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-006-nomachine-saveas.jpg?raw=true)
 
 ### **Double-click** the newly created connection
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-007-nomachine-connect.jpg?raw=true)
 
 ### Enter the **Username** and **Password**, optionally save the credentials and click **OK**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-008-nomachine-unp.jpg?raw=true)
 
 > for the time being the credentials are hard-coded on the Dockerfile as nomachine/nomachine
 
 ### Tick **Always create a new display on this server** and click **Yes**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-009-nomachine-createdisplay.jpg?raw=true)
 
 ### Tick **Mute audio on the server while I'm connected**, **Don't show this message again for this connection**, select the second icon on the bottom row in order to resize the remote display to your window and click **OK**
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-010-nomachine-audio.jpg?raw=true)
 
 ### Enjoy your Fedora Xfce Desktop
+
 ![alt](https://github.com/cmanique/docker-fedora-xfce-nomachine/blob/media/readme-011-nomachine-fullscreen.jpg?raw=true)
 
 > this case shows Red Hat CodeReady Studio, which was also installed through Docker, by having an image extending this one
