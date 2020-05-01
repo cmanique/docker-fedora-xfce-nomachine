@@ -53,7 +53,7 @@ RUN yum update -y && yum install -y \
 # prevent dbus failures for lack of /var/run/dbus
 RUN mkdir -p /var/lib/dbus && dbus-uuidgen > /var/lib/dbus/machine-id && mkdir -p /var/run/dbus
 
-# Install nomachine
+# install nomachine
 RUN curl -fSL "https://download.nomachine.com/download/6.9/Linux/nomachine_6.9.2_1_x86_64.rpm" -o nomachine.rpm && \
     rpm -i nomachine.rpm && \
     rm -rf nomachine.rpm
@@ -67,7 +67,7 @@ RUN groupadd -r nomachine -g 10001 && \
 RUN echo "nomachine ALL=(ALL) NOPASSWD: ALL" > "/etc/sudoers.d/nomachine" && \
     chmod 440 "/etc/sudoers.d/nomachine"
 
-# make the systemctl not try and go into graphical mode
+# make systemctl not go into graphical mode
 RUN ln -s /lib/systemd/system/systemd-logind.service /etc/systemd/system/multi-user.target.wants/systemd-logind.service
 RUN systemctl set-default multi-user.target
 
