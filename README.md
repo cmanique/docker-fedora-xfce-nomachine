@@ -33,7 +33,7 @@ $ docker run --cap-add=SYS_PTRACE -d -p 4000:4000 --name fedora-xfce-nomachine c
 ### Bash into the container with docker exec
 
 ```
-$ docker exec -it nomachine-codeready bash
+$ docker exec -it fedora-xfce-nomachine bash
 ```
 
 ### Start the NoMachine server
